@@ -20,8 +20,7 @@ int main() {
     max = x > y ?
         (x>z ? x:z) :
         (y>z ? y:z);
-    middle = (x != max && x != min) ?
-        x :
-        (y != max && y != min) ? y : z;
+    middle = (x != max && x != min) ? x :
+        ((y != max && y != min) ? y : z);
     cout << max << " " << middle << " " << min << "\n";
 }
