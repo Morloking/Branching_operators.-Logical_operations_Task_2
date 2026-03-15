@@ -5,7 +5,7 @@ using std::cin;
 
 int main() {
     setlocale(LC_ALL, "RUSSIAN");
-    int x{ 0 }; int y{ 0 }; int z{ 0 }; 
+    int x{ 0 }; int y{ 0 }; int z{ 0 };
     int max{ 0 }; int min{ 0 }; int middle{ 0 };
     cout << "Введите первое число: ";
     cin >> x;
@@ -14,13 +14,12 @@ int main() {
     cout << "Введите третье число: ";
     cin >> z;
     cout << "\nРезультат: ";
-    min = x < y ? 
-        (x<z ? x:z) :
-        (y<z ? y:z);
+    min = x < y ?
+        (x < z ? x : z) :
+        (y < z ? y : z);
     max = x > y ?
-        (x>z ? x:z) :
-        (y>z ? y:z);
-    middle = (x != max && x != min) ? x :
-        ((y != max && y != min) ? y:z);
+        (x > z ? x : z) :
+        (y > z ? y : z);
+    middle = x + y + z - max - min; //скорректировал эту строку, так даже с повторениями чисел будет корректный результат
     cout << max << " " << middle << " " << min << "\n";
 }
